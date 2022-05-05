@@ -28,6 +28,13 @@ loader
     sprite.height = 100;
 
     app.stage.addChild(sprite);
+
+    const sprite2 = new Sprite(texture2);
+    sprite2.position.set(200, 200);
+    sprite2.width = 100;
+    sprite2.height = 100;
+
+    app.stage.addChild(sprite2);
   });
 
 // const graphics = new Graphics();
