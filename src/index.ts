@@ -1,4 +1,4 @@
-import { Application, Loader } from "pixi.js";
+import { Application, Loader, Texture } from "pixi.js";
 
 const app = new Application({
   width: innerWidth,
@@ -10,6 +10,15 @@ document.body.appendChild(app.view);
 const loader = Loader.shared;
 
 // Load assets
+loader
+  .add("img1", "./assets/1.png")
+  .add("img2", "./assets/2.png")
+  .load((l) => {
+    const texture = Texture.from("img1");
+    const texture2 = Texture.from("img2");
+
+    console.log(texture, texture2);
+  });
 
 // const graphics = new Graphics();
 // graphics.beginFill(0xffffff); // 1st step
